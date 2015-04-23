@@ -1,0 +1,187 @@
+﻿@using System.Web.Optimization
+@using WEB.Models
+@{
+    var emodels = new EsuperfundUserModels();
+    emodels = (EsuperfundUserModels) ViewBag.data;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="image_src" href="~/Esuperfundico.jpg " />
+    <meta name="viewport" content="width=device-width" />
+    <link href="@Url.Content("~/Content/style.css")" type="text/css" rel="stylesheet" />
+
+    <script src="@Url.Content("~/js/jquery-1.9.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/jquery-ui.js")" type="text/javascript"></script>
+    @RenderSection("headPart", required: false)
+</head>
+<body>
+    <div class="wrapper">
+        <div id="DivTopArea" class="top">
+            <div class="logo">
+                <a href="#here">
+                    <img src="/Images/logo-esuperfundnew.jpg" alt="ebroking" /></a>
+            </div>
+            <div class="top_rightArea">
+                <div id="DivTopLinkArea" class="top_linkArea">
+                    <div class="btn_applynow">
+                        <img alt="Log out" src="/Images/btn_logout.jpg" onclick="return false;" />
+                    </div>
+                    <div class="top_links">
+                        @Html.Raw(emodels.FundName + "-" + emodels.FundTFN) &nbsp;&nbsp;|
+                    </div>
+                </div>
+                <div id="DivTopMenuArea" class="top_menuArea">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="top_menu_link">
+                                <div>
+                                    <ul class="rmRootGroup rmHorizontal">
+                                            <li class="rmItem rmFirst"><a href="/Home/Welcome" target="_self">Welcome</a></li>
+                                            <li class="rmItem"><a href="/Home/JumpToClient" target="_self">Checklist</a></li>
+                                            <li class="rmItem"><a href="/Home/Application/" target="_blank">Applications</a></li>
+                                            <li class="rmItem"><a href="/Home/Compliance/ComplianceSummary" target="_self">Compliance</a></li>
+                                            <li class="rmItem"><a href="/Home/TrustDeed/TrustDeed" target="_self">Trust Deed</a></li>
+                                            <li class="rmItem"><a href="/Home/InvestmentStrategy/InvestmentStrategy" target="_self">Investment Strategy</a></li>
+                                            <li class="rmItem"><a href="/Home/BDA/BDAUploadFile.aspx" target="_self">Death</a></li>
+                                            <li class="rmItem"><a href="/Home/Fees/Fees.aspx" target="_self">Fees</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="top_right">
+            </div>
+        </div>
+        <div class="top_date">
+            @DateTime.Now.ToString("dddd dd MMMM yyyy")
+        </div>
+        <div id="DivMiddleArea" class="middle_area">
+                <div class="middle_topArea">
+                    <div class="page_headingInner">
+                        <span>Applications</span>
+                    </div>
+                    <div class="pageheading_topLineInner">
+                        <div id="DivMenu2">
+                            <div class="RadMenu RadMenu_EbrokingRewards">
+                              <ul class="rmRootGroup rmHorizontal" mark="Applications" style="list-style: none;"><li class="rmItem rmFirst"><a href="/Applications/UpdateDetails.aspx" tag="" mark="Applications" class="rmLink rmRootLink"><span class="rmText rmExpandDown">Update Contact Details</span></a></li><li class="rmItem"><a href="/Applications/TermDeposit.aspx" tag="Applications" mark="Applications" class="rmLink rmFocused rmRootLink"><span class="rmText rmExpandDown">Term Deposit</span></a></li><li class="rmItem"><a href="/Applications/ChangeBank.aspx" tag="" mark="Applications" class="rmLink rmRootLink"><span class="rmText rmExpandDown">Add Bank </span></a></li><li class="rmItem"><a href="/Applications/ChangeBroker.aspx" tag="" mark="Applications" class="rmLink rmRootLink"><span class="rmText rmExpandDown">Add Broker </span></a></li><li class="rmItem"><a href="/Loan/LoanPreApproval.aspx" tag="Loan" mark="Applications" class="rmLink rmRootLink"><span class="rmText rmExpandDown">Loan</span></a></li><li class="rmItem"><a href="/Applications/bda.aspx" tag="" mark="Applications" class="rmLink rmRootLink"><span class="rmText rmExpandDown">Binding Death Agreement</span></a></li><li class="rmItem rmLast"><a href="/Applications/CentrelinkApplication.aspx" tag="" mark="Applications" class="rmLink rmRootLink"><span class="rmText rmExpandDown">Centrelink</span></a></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading_boxRightInner">
+                    </div>
+                </div>
+                <div style="float: left; width: 100%; margin-top: 30px;" id="DivShowHideGreyMenu">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="level3">
+                                <div class="level3_heading">
+                                    Applications
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="level4">
+                                <div id="DivGryMenu">
+                                    <div class="RadMenu RadMenu_EbrokingRewards">
+                                        <ul class="rmRootGroup rmHorizontal" style="list-style: none;">
+                                                <li class="rmItem rmFirst"><a class="rmLink rmFocused  rmRootLink" href="/Application/TermDeposit"><span class="rmText rmExpandDown">Application Form</span></a></li>
+                                                <li class="rmItem rmFirst"><a class="rmLink   rmRootLink" href="/Application/ApplicationHistory"><span class="rmText rmExpandDown">Application History</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            <div class="middle_borderBox">
+                <div id="DivTextAreaLeft" class="textArea_left_applynow">
+                    <div id="MainContent">
+                        @RenderSection("maincontent", required: false)
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div id="DivFooterArea">
+            @RenderSection("footarea", required: false)
+        </div>*@
+    </div>
+    <div id="DivFooterArea" class="footer" style="padding-bottom: 0;">
+        <div class="footer">
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <p class="advice-footer-header">General Advice Warning</p>
+                    <p class="advice-footer-text">
+                        The contents of this website are of a general nature only and have not been prepared to take into account any particular investor's objectives, financial situation or particular needs.
+                        ESUPERFUND does not provide financial product advice or recommend any financial products: This applies equally to those financial products which are established for your SMSF when you become a client of ESUPERFUND.
+                        Where this publication refers to a particular financial product then you should obtain a Product Disclosure Statement (PDS) relating to that product and consider the PDS before making any decision about whether to acquire the product. We also recommend that you should seek professional advice from a financial adviser before making any decision to purchase any financial product referred to on this website. While the sources for the material are considered reliable, responsibility is not accepted for any inaccuracies, errors or omissions. When setting up a SMSF it is important to understand that additional fees may apply that must be carefully considered prior to making a decision to setup a SMSF including an <span id="atoSuperLeFooter" style="cursor: pointer; text-decoration: underline;">ATO Supervisory Levy</span>, <span id="comTrusSetFeeFooter" style="cursor: pointer; text-decoration: underline;">Company Trustee Setup Fee (where applicable)</span>, and <span id="investFeesFooter" style="cursor: pointer; text-decoration: underline;">Investment Fees</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="hidPopFooter" style="position: absolute; visibility: hidden; z-index: 100;">
+<table style="width: 550px; border: 1px solid #c4d9e3;" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr class="level3" style="background-color: #ffffff;">
+            <td class="level3_heading" style="width: 460px; padding-top: 10px; color: #ffffff; text-align: left; font-family: arial, helvetica, sans-serif;" id="popupTitleFooter"></td>
+            <td class="level3_heading" style="text-decoration: underline; padding-top: 10px; color: #ffffff; font-family: arial, helvetica, sans-serif;"><span id="closeHidFooter" style="cursor: pointer;">Close</span></td>
+        </tr>
+        <tr style="background-color: white;">
+            <td id="popupContentFooter" style="padding: 0px 10px 5px;" colspan="2"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#atoSuperLeFooter").click(function () {
+            $("#popupContentFooter").empty();
+            $("#popupTitleFooter").html("ATO Supervisory Levy");
+            $("#popupContentFooter").append("<p>The ATO charges an annual levy of $259 for each SMSF.  This annual ATO Levy applies to all SMSF's and not just SMSF’s administered by ESUPERFUND.  Accordingly the annual ATO Levy cannot be avoided irrespective of which provider you choose to administer your SMSF.</p>")
+            var offset = $("#atoSuperLeFooter").offset();
+            var lleft = offset.left;
+            var ttop = offset.top - $("#hidPopFooter").height();
+            $("#hidPopFooter").offset({ top: ttop, left: lleft });
+            $("#hidPopFooter").css("visibility", "visible");
+        });
+        $("#comTrusSetFeeFooter").click(function () {
+            $("#popupContentFooter").empty();
+            var offset = $("#comTrusSetFeeFooter").offset();
+            $("#popupTitleFooter").html("Company Trustee Setup Fee (where applicable)");
+            $("#popupContentFooter").append("<p>When setting up a SMSF you can appoint either Individuals as SMSF Trustees or a Company as Trustee.  Each option is discussed  <a href='javascript:void(0)' target='_blank'>here</a>.  If you elect to have a Company as Trustee for your SMSF, the cost of establishing the Company (if you have not already done so) is approximately $550 which is predominantly an establishment fee payable to ASIC.  In addition there is an additional annual ASIC Fee of approximately $45.  These fees can be avoided by using Individual Trustees for your SMSF.  If you do not have an existing Company to act as the SMSF Trustee, but would like to establish a Company to act as Trustee for your SMSF, this can be done with any firm that establishes companies.  A popular website used by our clients to establish a company for their SMSF is eCompanies.  The eCompanies company establishment service can be found <a href='https://www.ecompanies.com.au/action/esuperfund-registration/' target='_blank'>here</a>. The cost to establish a company through eCompanies is $507. Once you have established a company and the company has been issued with an ACN, you can proceed to our online application to establish your SMSF <a href='https://apps.esuperfund.com.au/apply-for-a-smsf.html' target='_blank'>here</a>. <strong>Importantly our annual fee of $699 to attend to the tax return, financial statements and audit does not change if you use a company as Trustee for your SMSF</strong>.</p>")
+            var lleft = offset.left;
+            var ttop = offset.top - $("#hidPopFooter").height();
+            $("#hidPopFooter").offset({ top: ttop, left: lleft });
+            $("#hidPopFooter").css("visibility", "visible");
+        });
+
+        $("#investFeesFooter").click(function () {
+            $("#popupContentFooter").empty();
+            $("#popupTitleFooter").html("Investment Fees");
+            $("#popupContentFooter").append("<p>When you setup a SMSF you can invest in a range of different Investments as detailed <a href='javascript:void(0)' target='_blank'>here</a>.  It is important to understand that fees may be incurred when investing your Super Benefit <strong>including but not limited</strong> to brokerage fees when investing in shares and property purchase costs such as stamp duty and borrowing costs when investing in property. Information about Investment Fees can be typically found by reading the product disclosure statements and terms and conditions of the relevant Investment (where applicable) or by contacting the Product Provider directly.</p>");
+            var offset = $("#investFeesFooter").offset();
+            var lleft = offset.left;
+            var ttop = offset.top - $("#hidPopFooter").height();
+            $("#hidPopFooter").offset({ top: ttop, left: lleft });
+            $("#hidPopFooter").css("visibility", "visible");
+        });
+
+        $('#closeHidFooter').click(function () {
+            $('#hidPopFooter').css("visibility", "hidden");
+            $("#popupContentFooter").empty();
+        });
+    });
+
+    </script>
+    <iframe id="s3fra" name="s3fra" style="display:none;"></iframe>
+</body>
+</html>

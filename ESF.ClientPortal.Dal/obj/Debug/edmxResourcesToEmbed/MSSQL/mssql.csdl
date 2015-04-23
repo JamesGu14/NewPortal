@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SqlServerModel.edmx" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ESUPERFUND_DB_DEVEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Fund" EntityType="SqlServerModel.edmx.Fund" />
+    <EntitySet Name="Navigation_Page_List" EntityType="SqlServerModel.edmx.Navigation_Page_List" />
+    <EntitySet Name="Trustee" EntityType="SqlServerModel.edmx.Trustee" />
+  </EntityContainer>
+  <EntityType Name="Fund">
+    <Key>
+      <PropertyRef Name="MssqlID" />
+    </Key>
+    <Property Name="MssqlID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="FundTFN" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ABN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FundName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UploadDate" Type="DateTime" Precision="7" />
+    <Property Name="AuditorID" Type="Int32" />
+    <Property Name="EstabDate" Type="DateTime" Precision="7" />
+    <Property Name="FundStatusID" Type="Int32" />
+    <Property Name="IsFreeFirstYear" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsFreeSecondYear" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsBlacklist" Type="Int32" />
+    <Property Name="FundReceivedDate" Type="DateTime" Precision="7" />
+    <Property Name="FundApprovedDate" Type="DateTime" Precision="7" />
+    <Property Name="SMSFName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ExistingOrNewSMSF" Type="Int32" />
+    <Property Name="fPoAddress" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="fPoSuburb" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="fPoState" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="fPoPostcode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="fReAddress" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="fReSuburb" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="fReState" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="fRePostcode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Mobile" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TrusteeType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="isDelete" Type="Int32" />
+    <Property Name="IsSetupComplete" Type="Int32" />
+    <Property Name="SetupCompleteDate" Type="DateTime" Precision="7" />
+    <Property Name="BlacklistReasonID" Type="Int32" />
+    <Property Name="InitialSetupPackage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="SMSFLoginPassword" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ApplyDate" Type="DateTime" Precision="7" />
+    <Property Name="BlacklistDate" Type="DateTime" Precision="7" />
+    <Property Name="FinalSetupPackage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="LoginIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastUpdateTime" Type="DateTime" Precision="7" />
+    <Property Name="InvoiceOnly" Type="Int32" />
+    <Property Name="SMSFLoginPasswordNew" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Guid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IsVerified" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Navigation_Page_List">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="PageURL" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="DisplayText" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="IsExternalURL" Type="Byte" />
+    <Property Name="ExternalURL" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="URLTarget" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Depth" Type="Int32" Nullable="false" />
+    <Property Name="IsClientUse" Type="Boolean" />
+    <Property Name="OrderBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Trustee">
+    <Key>
+      <PropertyRef Name="MssqlID" />
+    </Key>
+    <Property Name="MssqlID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="FundID" Type="Int32" />
+    <Property Name="TrusteeNo" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TrusteeTFN" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="DateOfRetirement" Type="DateTime" Precision="3" />
+    <Property Name="IsMember" Type="Boolean" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TrusteeAppointed" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="RetirementStatus" Type="Boolean" />
+    <Property Name="MemberDateofDeath" Type="DateTime" Precision="3" />
+    <Property Name="MemberAppointed" Type="DateTime" Precision="3" />
+    <Property Name="IsDeceased" Type="Boolean" />
+    <Property Name="IsResigned" Type="Boolean" />
+    <Property Name="DateOfResigned" Type="DateTime" Precision="3" />
+    <Property Name="tReAddress" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="tReSuburb" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="tReState" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="tRePostcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="tPoAddress" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="tPoSuburb" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="tPoState" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="tPocode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="etDescription" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="etLinkedTypeId" Type="Int32" />
+  </EntityType>
+</Schema>

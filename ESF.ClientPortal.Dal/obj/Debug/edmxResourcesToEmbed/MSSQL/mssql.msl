@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SqlServerModeledmxStoreContainer" CdmEntityContainer="ESUPERFUND_DB_DEVEntities">
+    <EntitySetMapping Name="Fund">
+      <EntityTypeMapping TypeName="SqlServerModel.edmx.Fund">
+        <MappingFragment StoreEntitySet="Fund">
+          <ScalarProperty Name="MssqlID" ColumnName="MssqlID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FundTFN" ColumnName="FundTFN" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="FundName" ColumnName="FundName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+          <ScalarProperty Name="AuditorID" ColumnName="AuditorID" />
+          <ScalarProperty Name="EstabDate" ColumnName="EstabDate" />
+          <ScalarProperty Name="FundStatusID" ColumnName="FundStatusID" />
+          <ScalarProperty Name="IsFreeFirstYear" ColumnName="IsFreeFirstYear" />
+          <ScalarProperty Name="IsFreeSecondYear" ColumnName="IsFreeSecondYear" />
+          <ScalarProperty Name="IsBlacklist" ColumnName="IsBlacklist" />
+          <ScalarProperty Name="FundReceivedDate" ColumnName="FundReceivedDate" />
+          <ScalarProperty Name="FundApprovedDate" ColumnName="FundApprovedDate" />
+          <ScalarProperty Name="SMSFName" ColumnName="SMSFName" />
+          <ScalarProperty Name="ExistingOrNewSMSF" ColumnName="ExistingOrNewSMSF" />
+          <ScalarProperty Name="fPoAddress" ColumnName="fPoAddress" />
+          <ScalarProperty Name="fPoSuburb" ColumnName="fPoSuburb" />
+          <ScalarProperty Name="fPoState" ColumnName="fPoState" />
+          <ScalarProperty Name="fPoPostcode" ColumnName="fPoPostcode" />
+          <ScalarProperty Name="fReAddress" ColumnName="fReAddress" />
+          <ScalarProperty Name="fReSuburb" ColumnName="fReSuburb" />
+          <ScalarProperty Name="fReState" ColumnName="fReState" />
+          <ScalarProperty Name="fRePostcode" ColumnName="fRePostcode" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TrusteeType" ColumnName="TrusteeType" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="IsSetupComplete" ColumnName="IsSetupComplete" />
+          <ScalarProperty Name="SetupCompleteDate" ColumnName="SetupCompleteDate" />
+          <ScalarProperty Name="BlacklistReasonID" ColumnName="BlacklistReasonID" />
+          <ScalarProperty Name="InitialSetupPackage" ColumnName="InitialSetupPackage" />
+          <ScalarProperty Name="SMSFLoginPassword" ColumnName="SMSFLoginPassword" />
+          <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
+          <ScalarProperty Name="BlacklistDate" ColumnName="BlacklistDate" />
+          <ScalarProperty Name="FinalSetupPackage" ColumnName="FinalSetupPackage" />
+          <ScalarProperty Name="LoginIP" ColumnName="LoginIP" />
+          <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+          <ScalarProperty Name="InvoiceOnly" ColumnName="InvoiceOnly" />
+          <ScalarProperty Name="SMSFLoginPasswordNew" ColumnName="SMSFLoginPasswordNew" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Navigation_Page_List">
+      <EntityTypeMapping TypeName="SqlServerModel.edmx.Navigation_Page_List">
+        <MappingFragment StoreEntitySet="Navigation_Page_List">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PageURL" ColumnName="PageURL" />
+          <ScalarProperty Name="DisplayText" ColumnName="DisplayText" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="IsExternalURL" ColumnName="IsExternalURL" />
+          <ScalarProperty Name="ExternalURL" ColumnName="ExternalURL" />
+          <ScalarProperty Name="URLTarget" ColumnName="URLTarget" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="IsClientUse" ColumnName="IsClientUse" />
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trustee">
+      <EntityTypeMapping TypeName="SqlServerModel.edmx.Trustee">
+        <MappingFragment StoreEntitySet="Trustee">
+          <ScalarProperty Name="MssqlID" ColumnName="MssqlID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FundID" ColumnName="FundID" />
+          <ScalarProperty Name="TrusteeNo" ColumnName="TrusteeNo" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="TrusteeTFN" ColumnName="TrusteeTFN" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="DateOfRetirement" ColumnName="DateOfRetirement" />
+          <ScalarProperty Name="IsMember" ColumnName="IsMember" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="TrusteeAppointed" ColumnName="TrusteeAppointed" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RetirementStatus" ColumnName="RetirementStatus" />
+          <ScalarProperty Name="MemberDateofDeath" ColumnName="MemberDateofDeath" />
+          <ScalarProperty Name="MemberAppointed" ColumnName="MemberAppointed" />
+          <ScalarProperty Name="IsDeceased" ColumnName="IsDeceased" />
+          <ScalarProperty Name="IsResigned" ColumnName="IsResigned" />
+          <ScalarProperty Name="DateOfResigned" ColumnName="DateOfResigned" />
+          <ScalarProperty Name="tReAddress" ColumnName="tReAddress" />
+          <ScalarProperty Name="tReSuburb" ColumnName="tReSuburb" />
+          <ScalarProperty Name="tReState" ColumnName="tReState" />
+          <ScalarProperty Name="tRePostcode" ColumnName="tRePostcode" />
+          <ScalarProperty Name="tPoAddress" ColumnName="tPoAddress" />
+          <ScalarProperty Name="tPoSuburb" ColumnName="tPoSuburb" />
+          <ScalarProperty Name="tPoState" ColumnName="tPoState" />
+          <ScalarProperty Name="tPocode" ColumnName="tPocode" />
+          <ScalarProperty Name="etDescription" ColumnName="etDescription" />
+          <ScalarProperty Name="etLinkedTypeId" ColumnName="etLinkedTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

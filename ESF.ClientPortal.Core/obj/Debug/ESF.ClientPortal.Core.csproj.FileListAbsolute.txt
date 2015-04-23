@@ -1,0 +1,9 @@
+G:\VS2015Demo\EmptyFramework\ESF.ClientPortal\ESF.ClientPortal.Core\bin\Debug\ESF.ClientPortal.Core.dll
+G:\VS2015Demo\EmptyFramework\ESF.ClientPortal\ESF.ClientPortal.Core\bin\Debug\ESF.ClientPortal.Core.pdb
+G:\VS2015Demo\EmptyFramework\ESF.ClientPortal\ESF.ClientPortal.Core\obj\Debug\ESF.ClientPortal.Core.csprojResolveAssemblyReference.cache
+G:\VS2015Demo\EmptyFramework\ESF.ClientPortal\ESF.ClientPortal.Core\obj\Debug\ESF.ClientPortal.Core.dll
+G:\VS2015Demo\EmptyFramework\ESF.ClientPortal\ESF.ClientPortal.Core\obj\Debug\ESF.ClientPortal.Core.pdb
+E:\Esuperfund\ESF.ClientPortal\ESF.ClientPortal.Core\bin\Debug\ESF.ClientPortal.Core.dll
+E:\Esuperfund\ESF.ClientPortal\ESF.ClientPortal.Core\bin\Debug\ESF.ClientPortal.Core.pdb
+E:\Esuperfund\ESF.ClientPortal\ESF.ClientPortal.Core\obj\Debug\ESF.ClientPortal.Core.dll
+E:\Esuperfund\ESF.ClientPortal\ESF.ClientPortal.Core\obj\Debug\ESF.ClientPortal.Core.pdb

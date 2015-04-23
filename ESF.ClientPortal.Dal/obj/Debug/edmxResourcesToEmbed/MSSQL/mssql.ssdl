@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SqlServerModel.edmx.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SqlServerModeledmxStoreContainer">
+    <EntitySet Name="Fund" EntityType="SqlServerModel.edmx.Store.Fund" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Navigation_Page_List" EntityType="SqlServerModel.edmx.Store.Navigation_Page_List" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Trustee" EntityType="SqlServerModel.edmx.Store.Trustee" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Fund">
+    <Key>
+      <PropertyRef Name="MssqlID" />
+    </Key>
+    <Property Name="MssqlID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="int" />
+    <Property Name="FundTFN" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ABN" Type="nvarchar" MaxLength="50" />
+    <Property Name="FundName" Type="nvarchar" MaxLength="200" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="UploadDate" Type="datetime2" />
+    <Property Name="AuditorID" Type="int" />
+    <Property Name="EstabDate" Type="datetime2" />
+    <Property Name="FundStatusID" Type="int" />
+    <Property Name="IsFreeFirstYear" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsFreeSecondYear" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsBlacklist" Type="int" />
+    <Property Name="FundReceivedDate" Type="datetime2" />
+    <Property Name="FundApprovedDate" Type="datetime2" />
+    <Property Name="SMSFName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExistingOrNewSMSF" Type="int" />
+    <Property Name="fPoAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="fPoSuburb" Type="nvarchar" MaxLength="500" />
+    <Property Name="fPoState" Type="nvarchar" MaxLength="500" />
+    <Property Name="fPoPostcode" Type="nvarchar" MaxLength="100" />
+    <Property Name="fReAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="fReSuburb" Type="nvarchar" MaxLength="500" />
+    <Property Name="fReState" Type="nvarchar" MaxLength="500" />
+    <Property Name="fRePostcode" Type="nvarchar" MaxLength="100" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="100" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="100" />
+    <Property Name="TrusteeType" Type="nvarchar" MaxLength="100" />
+    <Property Name="isDelete" Type="int" />
+    <Property Name="IsSetupComplete" Type="int" />
+    <Property Name="SetupCompleteDate" Type="datetime2" />
+    <Property Name="BlacklistReasonID" Type="int" />
+    <Property Name="InitialSetupPackage" Type="nvarchar" MaxLength="500" />
+    <Property Name="SMSFLoginPassword" Type="nvarchar" MaxLength="500" />
+    <Property Name="ApplyDate" Type="datetime2" />
+    <Property Name="BlacklistDate" Type="datetime2" />
+    <Property Name="FinalSetupPackage" Type="nvarchar" MaxLength="500" />
+    <Property Name="LoginIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastUpdateTime" Type="datetime2" />
+    <Property Name="InvoiceOnly" Type="int" />
+    <Property Name="SMSFLoginPasswordNew" Type="nvarchar" MaxLength="500" />
+    <Property Name="Guid" Type="nvarchar(max)" />
+    <Property Name="IsVerified" Type="int" />
+  </EntityType>
+  <EntityType Name="Navigation_Page_List">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="PageURL" Type="nvarchar" MaxLength="300" />
+    <Property Name="DisplayText" Type="nvarchar" MaxLength="200" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="IsExternalURL" Type="tinyint" />
+    <Property Name="ExternalURL" Type="nvarchar" MaxLength="500" />
+    <Property Name="URLTarget" Type="nvarchar" MaxLength="50" />
+    <Property Name="Depth" Type="int" Nullable="false" />
+    <Property Name="IsClientUse" Type="bit" />
+    <Property Name="OrderBy" Type="int" />
+  </EntityType>
+  <EntityType Name="Trustee">
+    <Key>
+      <PropertyRef Name="MssqlID" />
+    </Key>
+    <Property Name="MssqlID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="int" />
+    <Property Name="FundID" Type="int" />
+    <Property Name="TrusteeNo" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="TrusteeTFN" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="DateOfRetirement" Type="datetime" />
+    <Property Name="IsMember" Type="bit" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TrusteeAppointed" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="RetirementStatus" Type="bit" />
+    <Property Name="MemberDateofDeath" Type="datetime" />
+    <Property Name="MemberAppointed" Type="datetime" />
+    <Property Name="IsDeceased" Type="bit" />
+    <Property Name="IsResigned" Type="bit" />
+    <Property Name="DateOfResigned" Type="datetime" />
+    <Property Name="tReAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="tReSuburb" Type="nvarchar" MaxLength="300" />
+    <Property Name="tReState" Type="nvarchar" MaxLength="300" />
+    <Property Name="tRePostcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="tPoAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="tPoSuburb" Type="nvarchar" MaxLength="300" />
+    <Property Name="tPoState" Type="nvarchar" MaxLength="300" />
+    <Property Name="tPocode" Type="nvarchar" MaxLength="50" />
+    <Property Name="etDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="etLinkedTypeId" Type="int" />
+  </EntityType>
+</Schema>

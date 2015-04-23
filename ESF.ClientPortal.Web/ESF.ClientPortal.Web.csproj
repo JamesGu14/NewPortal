@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0D64D9A-C53A-44F1-99DF-44DF02F06F99}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESF.ClientPortal.Web</RootNamespace>
+    <AssemblyName>ESF.ClientPortal.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>F:\workfolder\Etax2.0_Live\ESUPER.Web.Etax\bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\599.jpg" />
+    <Content Include="Images\aboutourcompany.GIF" />
+    <Content Include="Images\abt_etrading.jpg" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\adb_f_plr.gif" />
+    <Content Include="Images\add_banner.jpg" />
+    <Content Include="Images\add_btn.gif" />
+    <Content Include="Images\adsence_link.jpg" />
+    <Content Include="Images\air_logo.gif" />
+    <Content Include="Images\anz.jpg" />
+    <Content Include="Images\anzarrow900%2520copy.jpg" />
+    <Content Include="Images\anzarrow900copy.jpg" />
+    <Content Include="Images\anz_logo.gif" />
+    <Content Include="Images\anz_logo_small.gif" />
+    <Content Include="Images\apply-now.gif" />
+    <Content Include="Images\applynow.jpg" />
+    <Content Include="Images\apply_now.gif" />
+    <Content Include="Images\apply_now.jpg" />
+    <Content Include="Images\arrow-black.gif" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\arrow_left.jpg" />
+    <Content Include="Images\arrow_orange_right.gif" />
+    <Content Include="Images\arrow_right.jpg" />
+    <Content Include="Images\australian_market_update.jpg" />
+    <Content Include="Images\back.gif" />
+    <Content Include="Images\banner1.gif" />
+    <Content Include="Images\banner10.gif" />
+    <Content Include="Images\banner11.gif" />
+    <Content Include="Images\banner12.gif" />
+    <Content Include="Images\banner2.gif" />
+    <Content Include="Images\banner3.gif" />
+    <Content Include="Images\banner4.gif" />
+    <Content Include="Images\banner5.gif" />
+    <Content Include="Images\banner6.gif" />
+    <Content Include="Images\banner7.gif" />
+    <Content Include="Images\banner8.gif" />
+    <Content Include="Images\banner9.gif" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\bgTest.jpg" />
+    <Content Include="Images\big_font.gif" />
+    <Content Include="Images\big_font_select.gif" />
+    <Content Include="Images\blank_space.gif" />
+    <Content Include="Images\bluefadebackground.bmp" />
+    <Content Include="Images\Blue_Bar.JPG" />
+    <Content Include="Images\bookmark.jpg" />
+    <Content Include="Images\bottom.jpg" />
+    <Content Include="Images\btn_applyNow.png" />
+    <Content Include="Images\btn_go_bgwht.gif" />
+    <Content Include="Images\btn_login.jpg" />
+    <Content Include="Images\btn_logout.jpg" />
+    <Content Include="Images\btn_submit.jpg" />
+    <Content Include="Images\bulding.jpg" />
+    <Content Include="Images\bulet.gif" />
+    <Content Include="Images\bullet.jpg" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\bwa.gif" />
+    <Content Include="Images\bwa_blue.gif" />
+    <Content Include="Images\bwa_ico.gif" />
+    <Content Include="Images\cba.jpg" />
+    <Content Include="Images\Checkmark-icon.png" />
+    <Content Include="Images\clickformore.jpg" />
+    <Content Include="Images\clickformore_1.jpg" />
+    <Content Include="Images\clickformore_2.jpg" />
+    <Content Include="Images\commonquestions.GIF" />
+    <Content Include="Images\Complete.bmp" />
+    <Content Include="Images\Complete.gif" />
+    <Content Include="Images\Complete1.bmp" />
+    <Content Include="Images\comsec&amp;macquarielogo.bmp" />
+    <Content Include="Images\comsec.bmp" />
+    <Content Include="Images\comsec1.bmp" />
+    <Content Include="Images\COMSEC3.bmp" />
+    <Content Include="Images\comseclogo.bmp" />
+    <Content Include="Images\comseclogo100.bmp" />
+    <Content Include="Images\comseclogo100.jpg" />
+    <Content Include="Images\contactdetails.GIF" />
+    <Content Include="Images\contactusnow.GIF" />
+    <Content Include="Images\contractall.gif" />
+    <Content Include="Images\dabase_detailBg.jpg" />
+    <Content Include="Images\dabase_detailBgCopy.jpg" />
+    <Content Include="Images\datePickerPopup.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\delete_icon.jpg" />
+    <Content Include="Images\deposit_money.gif" />
+    <Content Include="Images\divider.gif" />
+    <Content Include="Images\DOUBLEARROW.bmp" />
+    <Content Include="Images\doubleredarrow.bmp" />
+    <Content Include="Images\down_arrow.gif" />
+    <Content Include="Images\dropdownlist_item_bg.jpg" />
+    <Content Include="Images\dropdownlist_ul_bg.jpg" />
+    <Content Include="Images\dropdownlist_ul_container_bg.jpg" />
+    <Content Include="Images\dropdown_icon.png" />
+    <Content Include="Images\earn-575.gif" />
+    <Content Include="Images\ebrokingLogo_small.jpg" />
+    <Content Include="Images\ebroking_login_btn.jpg" />
+    <Content Include="Images\ebroking_login_btn_1.jpg" />
+    <Content Include="Images\edit-icon.gif" />
+    <Content Include="Images\eloginlogo.jpg" />
+    <Content Include="Images\Error-Symbol-icon.png" />
+    <Content Include="Images\Esuperfund.jpg" />
+    <Content Include="Images\esuperfund_admin.gif" />
+    <Content Include="Images\esuperfund_logo.gif" />
+    <Content Include="Images\esuperfund_logo1.GIF" />
+    <Content Include="Images\etradelogo1.bmp" />
+    <Content Include="Images\etradelogo2.bmp" />
+    <Content Include="Images\etradelogo2a.jpg" />
+    <Content Include="Images\etrade_banner.gif" />
+    <Content Include="Images\etrade_logo.gif" />
+    <Content Include="Images\etrade_logo1.GIF" />
+    <Content Include="Images\etrade_logo2.gif" />
+    <Content Include="Images\etrade_logo_med.gif" />
+    <Content Include="Images\etrade_logo_med_old.gif" />
+    <Content Include="Images\etrade_logo_small.gif" />
+    <Content Include="Images\etrade_logo_v_small.gif" />
+    <Content Include="Images\etrade_logo_v_small_old.gif" />
+    <Content Include="Images\excel.gif" />
+    <Content Include="Images\excel.jpg" />
+    <Content Include="Images\Existing.png" />
+    <Content Include="Images\expandall.gif" />
+    <Content Include="Images\e_superfund_03.jpg" />
+    <Content Include="Images\e_superfund_07.jpg" />
+    <Content Include="Images\e_superfund_09.jpg" />
+    <Content Include="Images\e_superfund_10.jpg" />
+    <Content Include="Images\e_superfund_11.jpg" />
+    <Content Include="Images\e_superfund_12.jpg" />
+    <Content Include="Images\e_superfund_13.jpg" />
+    <Content Include="Images\e_superfund_14.jpg" />
+    <Content Include="Images\e_superfund_15.jpg" />
+    <Content Include="Images\e_superfund_16.jpg" />
+    <Content Include="Images\e_superfund_17.jpg" />
+    <Content Include="Images\e_superfund_18.jpg" />
+    <Content Include="Images\e_superfund_19.jpg" />
+    <Content Include="Images\e_superfund_20.jpg" />
+    <Content Include="Images\e_superfund_21.jpg" />
+    <Content Include="Images\e_superfund_22.jpg" />
+    <Content Include="Images\e_superfund_23.jpg" />
+    <Content Include="Images\e_superfund_24.jpg" />
+    <Content Include="Images\e_superfund_25.jpg" />
+    <Content Include="Images\e_superfund_29.gif" />
+    <Content Include="Images\e_superfund_29.jpg" />
+    <Content Include="Images\e_superfund_30.gif" />
+    <Content Include="Images\e_superfund_30.jpg" />
+    <Content Include="Images\e_superfund_31.jpg" />
+    <Content Include="Images\e_superfund_32.jpg" />
+    <Content Include="Images\e_superfund_33.jpg" />
+    <Content Include="Images\e_superfund_35.jpg" />
+    <Content Include="Images\e_superfund_37.jpg" />
+    <Content Include="Images\e_superfund_38.jpg" />
+    <Content Include="Images\e_superfund_40.jpg" />
+    <Content Include="Images\e_superfund_42.jpg" />
+    <Content Include="Images\e_superfund_46.jpg" />
+    <Content Include="Images\e_superfund_49.jpg" />
+    <Content Include="Images\e_superfund_57.jpg" />
+    <Content Include="Images\e_superfund_60.jpg" />
+    <Content Include="Images\e_superfund_61.jpg" />
+    <Content Include="Images\e_superfund_62.jpg" />
+    <Content Include="Images\e_superfund_63.jpg" />
+    <Content Include="Images\e_superfund_67.jpg" />
+    <Content Include="Images\e_superfund_70.jpg" />
+    <Content Include="Images\e_superfund_75.gif" />
+    <Content Include="Images\e_superfund_75.jpg" />
+    <Content Include="Images\e_superfund_77.jpg" />
+    <Content Include="Images\e_superfund_77_black.jpg" />
+    <Content Include="Images\e_superfund_81.jpg" />
+    <Content Include="Images\e_superfund_82.jpg" />
+    <Content Include="Images\facebook32.png" />
+    <Content Include="Images\facebook_welcome_page.jpg" />
+    <Content Include="Images\faintline.bmp" />
+    <Content Include="Images\fourarrow.gif" />
+    <Content Include="Images\fourarrow.jpg" />
+    <Content Include="Images\FREE SMSF SETUP_.jpg" />
+    <Content Include="Images\free_smsf.gif" />
+    <Content Include="Images\go-btn.gif" />
+    <Content Include="Images\google.gif" />
+    <Content Include="Images\google_search.jpg" />
+    <Content Include="Images\Go_Next.JPG" />
+    <Content Include="Images\Go_Next1.JPG" />
+    <Content Include="Images\Go_Next_Tab.JPG" />
+    <Content Include="Images\Go_Next_Tab1.JPG" />
+    <Content Include="Images\green_arrow.gif" />
+    <Content Include="Images\Green_Bar.JPG" />
+    <Content Include="Images\heading_greenBg.jpg" />
+    <Content Include="Images\heading_greenBgCopy.jpg" />
+    <Content Include="Images\help.jpg" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\Home.ascx" />
+    <Content Include="Images\hrbg.gif" />
+    <Content Include="Images\icon-print.gif" />
+    <Content Include="Images\icon_down.png" />
+    <Content Include="Images\icon_excel.jpg" />
+    <Content Include="Images\icon_excel1.jpg" />
+    <Content Include="Images\icon_instructions.jpg" />
+    <Content Include="Images\icon_print.jpg" />
+    <Content Include="Images\icon_search.jpg" />
+    <Content Include="Images\icon_up.png" />
+    <Content Include="Images\IGMarkets1.GIF" />
+    <Content Include="Images\igmarkets100.bmp" />
+    <Content Include="Images\img-1.gif" />
+    <Content Include="Images\img-10.gif" />
+    <Content Include="Images\img-11.gif" />
+    <Content Include="Images\img-12.gif" />
+    <Content Include="Images\img-13.gif" />
+    <Content Include="Images\img-14.gif" />
+    <Content Include="Images\img-15.gif" />
+    <Content Include="Images\img-16.gif" />
+    <Content Include="Images\img-17.gif" />
+    <Content Include="Images\img-18.gif" />
+    <Content Include="Images\img-19.gif" />
+    <Content Include="Images\img-2.gif" />
+    <Content Include="Images\img-20.gif" />
+    <Content Include="Images\img-21.gif" />
+    <Content Include="Images\img-22.gif" />
+    <Content Include="Images\img-23.gif" />
+    <Content Include="Images\img-24.gif" />
+    <Content Include="Images\img-25.gif" />
+    <Content Include="Images\img-26.gif" />
+    <Content Include="Images\img-27.gif" />
+    <Content Include="Images\img-3.gif" />
+    <Content Include="Images\img-4.gif" />
+    <Content Include="Images\img-5.gif" />
+    <Content Include="Images\img-6.gif" />
+    <Content Include="Images\img-7.gif" />
+    <Content Include="Images\img-8.gif" />
+    <Content Include="Images\img-9.gif" />
+    <Content Include="Images\Incomplete.bmp" />
+    <Content Include="Images\InComplete.gif" />
+    <Content Include="Images\Incomplete1.bmp" />
+    <Content Include="Images\instructions.jpg" />
+    <Content Include="Images\ipo_centre.gif" />
+    <Content Include="Images\knowledge.gif" />
+    <Content Include="Images\knowledge_open.gif" />
+    <Content Include="Images\league_gothic-webfont.svg" />
+    <Content Include="Images\learnmore.jpg" />
+    <Content Include="Images\left_1.jpg" />
+    <Content Include="Images\left_2.jpg" />
+    <Content Include="Images\lernmore.jpg" />
+    <Content Include="Images\leve2_bg.jpg" />
+    <Content Include="Images\leve2_left.jpg" />
+    <Content Include="Images\level1.jpg" />
+    <Content Include="Images\level1_divider.jpg" />
+    <Content Include="Images\level2_arrow.jpg" />
+    <Content Include="Images\level2_right.jpg" />
+    <Content Include="Images\level2_titleArrow.jpg" />
+    <Content Include="Images\level3.jpg" />
+    <Content Include="Images\level3_copy.jpg" />
+    <Content Include="Images\level4.jpg" />
+    <Content Include="Images\level4_divider.jpg" />
+    <Content Include="Images\level4_divider_old.jpg" />
+    <Content Include="Images\li-arrow.gif" />
+    <Content Include="Images\lightbluegraphic.bmp" />
+    <Content Include="Images\lightbluegraphic109.bmp" />
+    <Content Include="Images\lightbluestrip.bmp" />
+    <Content Include="Images\lightbluestrip1.bmp" />
+    <Content Include="Images\LIGHTBLUGRAPHIC2.bmp" />
+    <Content Include="Images\linkedin32.png" />
+    <Content Include="Images\login-heading.jpg" />
+    <Content Include="Images\login.gif" />
+    <Content Include="Images\loginbox_lockicon.gif" />
+    <Content Include="Images\login_box.png" />
+    <Content Include="Images\login_btn.jpg" />
+    <Content Include="Images\login_logo.png" />
+    <Content Include="Images\Login_top.gif" />
+    <Content Include="Images\login_top.jpg" />
+    <Content Include="Images\logo-ebroking.jpg" />
+    <Content Include="Images\logo-esuperfund.jpg" />
+    <Content Include="Images\logo-esuperfundnew _old.jpg" />
+    <Content Include="Images\logo-esuperfundnew.jpg" />
+    <Content Include="Images\logo-esuperfundnew_oldFeb.jpg" />
+    <Content Include="Images\logo.JPG" />
+    <Content Include="Images\logout.gif" />
+    <Content Include="Images\logout.JPG" />
+    <Content Include="Images\lowerbranch.gif" />
+    <Content Include="Images\macquarielogo100.bmp" />
+    <Content Include="Images\managedfunds_portfolio.gif" />
+    <Content Include="Images\managedfunds_research.gif" />
+    <Content Include="Images\marcquarie_banner.jpg" />
+    <Content Include="Images\MBL.bmp" />
+    <Content Include="Images\MBL2.bmp" />
+    <Content Include="Images\med_font.gif" />
+    <Content Include="Images\med_font_select.gif" />
+    <Content Include="Images\menu_divider.jpg" />
+    <Content Include="Images\menu_strip.gif" />
+    <Content Include="Images\middle_1.jpg" />
+    <Content Include="Images\middle_2.jpg" />
+    <Content Include="Images\middle_topBoxRight.jpg" />
+    <Content Include="Images\middle_topBoxRightInner.jpg" />
+    <Content Include="Images\Minussigntable.gif" />
+    <Content Include="Images\money_award.jpg" />
+    <Content Include="Images\nav_sel_07.jpg" />
+    <Content Include="Images\nav_sel_09.jpg" />
+    <Content Include="Images\nav_sel_11.jpg" />
+    <Content Include="Images\nav_sel_13.jpg" />
+    <Content Include="Images\nav_sel_15.jpg" />
+    <Content Include="Images\nav_sel_17.jpg" />
+    <Content Include="Images\nav_sel_19.jpg" />
+    <Content Include="Images\nav_sel_65.jpg" />
+    <Content Include="Images\NewButtonImage\bntDelete.bmp" />
+    <Content Include="Images\NewButtonImage\btn-Add.bmp" />
+    <Content Include="Images\NewButtonImage\btn-adduser.gif" />
+    <Content Include="Images\NewButtonImage\btn-all.gif" />
+    <Content Include="Images\NewButtonImage\btn-all1.gif" />
+    <Content Include="Images\NewButtonImage\btn-amenduser.gif" />
+    <Content Include="Images\NewButtonImage\btn-delete.gif" />
+    <Content Include="Images\NewButtonImage\btn-deleteuser.gif" />
+    <Content Include="Images\NewButtonImage\btn-edit-mail.gif" />
+    <Content Include="Images\NewButtonImage\btn-editpasswordemail.gif" />
+    <Content Include="Images\NewButtonImage\btn-import.gif" />
+    <Content Include="Images\NewButtonImage\btn-importdatafileproforma.gif" />
+    <Content Include="Images\NewButtonImage\btn-importdatafileproforma_.gif" />
+    <Content Include="Images\NewButtonImage\btn-import_red.gif" />
+    <Content Include="Images\NewButtonImage\btn-instructions.gif" />
+    <Content Include="Images\NewButtonImage\btn-MinMaxFactors.bmp" />
+    <Content Include="Images\NewButtonImage\btn-nilldataupload.gif" />
+    <Content Include="Images\NewButtonImage\btn-nilldataupload_red.gif" />
+    <Content Include="Images\NewButtonImage\btn-print.gif" />
+    <Content Include="Images\NewButtonImage\btn-resetchecklistdata.gif" />
+    <Content Include="Images\NewButtonImage\btn-resetpassword.gif" />
+    <Content Include="Images\NewButtonImage\btn-save.gif" />
+    <Content Include="Images\NewButtonImage\btn-send-mail.gif" />
+    <Content Include="Images\NewButtonImage\btn-sendpassword.gif" />
+    <Content Include="Images\NewButtonImage\btn-upload.gif" />
+    <Content Include="Images\NewButtonImage\btnAddReinvestment.bmp" />
+    <Content Include="Images\NewButtonImage\btnAddTrans.bmp" />
+    <Content Include="Images\NewButtonImage\btnDeleteAll.bmp" />
+    <Content Include="Images\NewButtonImage\btnDeleteReinvestment.bmp" />
+    <Content Include="Images\NewButtonImage\btnImportTransaction.bmp" />
+    <Content Include="Images\NewButtonImage\btnPersonalAccountBuy.bmp" />
+    <Content Include="Images\NewButtonImage\btn_MovetoDatabase.bmp" />
+    <Content Include="Images\NewButtonImage\btn_MovetoDatabase.GIF" />
+    <Content Include="Images\NewButtonImage\client-search.gif" />
+    <Content Include="Images\NewButtonImage\edit-all.gif" />
+    <Content Include="Images\NewButtonImage\excel.gif" />
+    <Content Include="Images\NewButtonImage\excelnew.png" />
+    <Content Include="Images\NewButtonImage\go.gif" />
+    <Content Include="Images\NewButtonImage\go1.gif" />
+    <Content Include="Images\NewButtonImage\hrbg.gif" />
+    <Content Include="Images\NewButtonImage\minus.gif" />
+    <Content Include="Images\NewButtonImage\mive-to-blacklist.gif" />
+    <Content Include="Images\NewButtonImage\mive-to-blacklist1.gif" />
+    <Content Include="Images\NewButtonImage\n-instructions.gif" />
+    <Content Include="Images\NewButtonImage\plus.gif" />
+    <Content Include="Images\NewButtonImage\print.gif" />
+    <Content Include="Images\NewButtonImage\printnew.gif" />
+    <Content Include="Images\NewButtonImage\statistics.gif" />
+    <Content Include="Images\new_login_btn.png" />
+    <Content Include="Images\next.jpg" />
+    <Content Include="Images\NextArrow.bmp" />
+    <Content Include="Images\next_btn.gif" />
+    <Content Include="Images\open_account.jpg" />
+    <Content Include="Images\orangearrow.bmp" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\page-heading.jpg" />
+    <Content Include="Images\page-heading1.jpg" />
+    <Content Include="Images\page-headingInner.jpg" />
+    <Content Include="Images\pageFirst.gif" />
+    <Content Include="Images\pageLast.gif" />
+    <Content Include="Images\pageNext.gif" />
+    <Content Include="Images\pageNext0.gif" />
+    <Content Include="Images\pageNext1.gif" />
+    <Content Include="Images\pagePrevious.gif" />
+    <Content Include="Images\pdf.gif" />
+    <Content Include="Images\pdffooter.jpg" />
+    <Content Include="Images\PdfPage3.jpg" />
+    <Content Include="Images\PdfPage4.jpg" />
+    <Content Include="Images\PdfPage5.jpg" />
+    <Content Include="Images\PdfPage6.jpg" />
+    <Content Include="Images\pdfPage7.jpg" />
+    <Content Include="Images\PdfPage8.jpg" />
+    <Content Include="Images\PdfPage9.jpg" />
+    <Content Include="Images\pdf_icon.jpg" />
+    <Content Include="Images\Plustable.gif" />
+    <Content Include="Images\Prents.png" />
+    <Content Include="Images\prev_btn.gif" />
+    <Content Include="Images\print.jpg" />
+    <Content Include="Images\printer_1.png" />
+    <Content Include="Images\priority.png" />
+    <Content Include="Images\promotiongraphic.bmp" />
+    <Content Include="Images\promotiongraphic1.jpg" />
+    <Content Include="Images\promotiongraphic11.JPG" />
+    <Content Include="Images\promotiongraphic31JULY2009.jpg" />
+    <Content Include="Images\promotiongraphic31OCTOBER2009.jpg" />
+    <Content Include="Images\promotiongraphicAUGUST.bmp" />
+    <Content Include="Images\promotiongraphicSEPTEMBER.bmp" />
+    <Content Include="Images\promotiongraphictest.jpg" />
+    <Content Include="Images\promotiongraphictest1.JPG" />
+    <Content Include="Images\publishedarticles.GIF" />
+    <Content Include="Images\QFF.gif" />
+    <Content Include="Images\QFF.jpg" />
+    <Content Include="Images\redarrow.bmp" />
+    <Content Include="Images\red_add.jpg" />
+    <Content Include="Images\right-heading.jpg" />
+    <Content Include="Images\right_1.jpg" />
+    <Content Include="Images\right_2.jpg" />
+    <Content Include="Images\role_green.gif" />
+    <Content Include="Images\s-m-bg.gif" />
+    <Content Include="Images\s-m-left.gif" />
+    <Content Include="Images\s-m-right.gif" />
+    <Content Include="Images\ScrollLeft.png" />
+    <Content Include="Images\ScrollRight.png" />
+    <Content Include="Images\search.gif" />
+    <Content Include="Images\search_back.JPG" />
+    <Content Include="Images\selected_nav_01.gif" />
+    <Content Include="Images\selected_nav_01_1.gif" />
+    <Content Include="Images\selected_nav_02.gif" />
+    <Content Include="Images\selected_nav_03.gif" />
+    <Content Include="Images\selected_nav_04.gif" />
+    <Content Include="Images\selected_nav_04_1.gif" />
+    <Content Include="Images\selectio_menu_01.gif" />
+    <Content Include="Images\selectio_menu_02.gif" />
+    <Content Include="Images\selectio_menu_03.gif" />
+    <Content Include="Images\selectio_menu_04.gif" />
+    <Content Include="Images\selectio_menu_05.gif" />
+    <Content Include="Images\selectio_menu_06.gif" />
+    <Content Include="Images\self_managed_banner.jpg" />
+    <Content Include="Images\sidegraphics.bmp" />
+    <Content Include="Images\sidegraphics1.bmp" />
+    <Content Include="Images\Skybluebar.bmp" />
+    <Content Include="Images\small_font.gif" />
+    <Content Include="Images\small_font_select.gif" />
+    <Content Include="Images\SMSF-Award.gif" />
+    <Content Include="Images\smsf_fees.jpg" />
+    <Content Include="Images\SMSF_Market_Value_SABP.JPG" />
+    <Content Include="Images\SMSF_Market_Value_TRAP.JPG" />
+    <Content Include="Images\smsf_setup.jpg" />
+    <Content Include="Images\smsf_sub.jpg" />
+    <Content Include="Images\sub-arrow.gif" />
+    <Content Include="Images\Substitute.gif" />
+    <Content Include="Images\suncorp_banner.jpg" />
+    <Content Include="Images\suncorp_logo.gif" />
+    <Content Include="Images\suncorp_logo_small.gif" />
+    <Content Include="Images\tabbg.gif" />
+    <Content Include="Images\table_list_tab_1.png" />
+    <Content Include="Images\table_list_tab_120.png" />
+    <Content Include="Images\table_list_tab_1202.png" />
+    <Content Include="Images\table_list_tab_121.png" />
+    <Content Include="Images\table_list_tab_2.png" />
+    <Content Include="Images\tabRightOn.gif" />
+    <Content Include="Images\tab_menu_left.gif" />
+    <Content Include="Images\tab_menu_right.gif" />
+    <Content Include="Images\tab_nav_01.gif" />
+    <Content Include="Images\tab_nav_01_1.gif" />
+    <Content Include="Images\tab_nav_02.gif" />
+    <Content Include="Images\tab_nav_03.gif" />
+    <Content Include="Images\tab_nav_04.gif" />
+    <Content Include="Images\tab_nav_04_1.gif" />
+    <Content Include="Images\technical_analisys.gif" />
+    <Content Include="Images\technical_arrow.gif" />
+    <Content Include="Images\TermDepositContent.jpg" />
+    <Content Include="Images\threeman.jpg" />
+    <Content Include="Images\title_bg.gif" />
+    <Content Include="Images\title_left.gif" />
+    <Content Include="Images\title_right.gif" />
+    <Content Include="Images\tl.jpg" />
+    <Content Include="Images\toggle-icon.gif" />
+    <Content Include="Images\toolbar_openacct_text.gif" />
+    <Content Include="Images\toolbar_quote.gif" />
+    <Content Include="Images\toolbar_service_text.gif" />
+    <Content Include="Images\top-banner.png" />
+    <Content Include="Images\top.jpg" />
+    <Content Include="Images\topMenu_bg.jpg" />
+    <Content Include="Images\topMenu_right.jpg" />
+    <Content Include="Images\top_inner.jpg" />
+    <Content Include="Images\tour_thumbnails\images\clickformore_1_01.jpg" />
+    <Content Include="Images\tour_thumbnails\images\clickformore_1_02.jpg" />
+    <Content Include="Images\tour_thumbnails\login.jpg" />
+    <Content Include="Images\tour_thumbnails\market_reports.jpg" />
+    <Content Include="Images\tour_thumbnails\my_accounts.jpg" />
+    <Content Include="Images\tour_thumbnails\overview.jpg" />
+    <Content Include="Images\tour_thumbnails\rates_fees.jpg" />
+    <Content Include="Images\tour_thumbnails\research.jpg" />
+    <Content Include="Images\tour_thumbnails\trading.jpg" />
+    <Content Include="Images\tour_thumbnails\watchlists.jpg" />
+    <Content Include="Images\tr.jpg" />
+    <Content Include="Images\transfer.gif" />
+    <Content Include="Images\transfer_money.gif" />
+    <Content Include="Images\trapwarning.jpg" />
+    <Content Include="Images\tree_loading.gif" />
+    <Content Include="Images\twitter32.png" />
+    <Content Include="Images\twoarow.jpg" />
+    <Content Include="Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Images\untitled.GIF" />
+    <Content Include="Images\untitled123.jpg" />
+    <Content Include="Images\untitled_12.jpg" />
+    <Content Include="Images\update.gif" />
+    <Content Include="Images\upload\default.png" />
+    <Content Include="Images\upload\doc.png" />
+    <Content Include="Images\upload\jpg.png" />
+    <Content Include="Images\upload\pdf.png" />
+    <Content Include="Images\upload\xls.png" />
+    <Content Include="Images\upload\zip.png" />
+    <Content Include="Images\uppebranch.gif" />
+    <Content Include="Images\up_arrow.gif" />
+    <Content Include="Images\user_green.gif" />
+    <Content Include="Images\valuation_model.bmp" />
+    <Content Include="Images\ViewFile.JPG" />
+    <Content Include="Images\vr_divider.jpg" />
+    <Content Include="Images\warning.jpg" />
+    <Content Include="Images\web.gif" />
+    <Content Include="Images\weeklyreport.GIF" />
+    <Content Include="Images\windows.jpg" />
+    <Content Include="Images\windows_adjustment.jpg" />
+    <Content Include="Images\windows_for_home_page3.jpg" />
+    <Content Include="Images\withdraw_money.gif" />
+    <Content Include="Images\wordpress32.png" />
+    <Content Include="Images\xbtn_go_bgwht.gif" />
+    <Content Include="Images\xe_superfund_77.jpg" />
+    <Content Include="Images\xloginbox_lockicon.gif" />
+    <Content Include="Images\Youtube32.png" />
+    <Content Include="Js\jquery-1.9.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Application.cshtml">
+      <BrowseToURL>~/Home/Welcome</BrowseToURL>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\img-21.gif.bak" />
+    <Content Include="Images\ImgGeneration.ashx" />
+    <Content Include="Images\league_gothic-webfont.eot" />
+    <Content Include="Images\league_gothic-webfont.ttf" />
+    <Content Include="Images\league_gothic-webfont.woff" />
+    <Content Include="Images\open_account.psd" />
+    <Content Include="Images\pdffooter.mkm" />
+    <Content Include="Images\_notes\arrow.gif.mno" />
+    <Content Include="Images\_notes\big_font.gif.mno" />
+    <Content Include="Images\_notes\big_font_select.gif.mno" />
+    <Content Include="Images\_notes\blank_space.gif.mno" />
+    <Content Include="Images\_notes\bulding.jpg.mno" />
+    <Content Include="Images\_notes\fourarrow.gif.mno" />
+    <Content Include="Images\_notes\fourarrow.jpg.mno" />
+    <Content Include="Images\_notes\lowerbranch.gif.mno" />
+    <Content Include="Images\_notes\med_font.gif.mno" />
+    <Content Include="Images\_notes\med_font_select.gif.mno" />
+    <Content Include="Images\_notes\menu_strip.gif.mno" />
+    <Content Include="Images\_notes\small_font.gif.mno" />
+    <Content Include="Images\_notes\small_font_select.gif.mno" />
+    <Content Include="Images\_notes\threeman.jpg.mno" />
+    <Content Include="Images\_notes\uppebranch.gif.mno" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESF.ClientPortal.Dal\ESF.ClientPortal.Dal.csproj">
+      <Project>{7dd3a9c0-c161-4d00-acdf-5755ed091a88}</Project>
+      <Name>ESF.ClientPortal.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9517</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51053/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
